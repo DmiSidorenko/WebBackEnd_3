@@ -21,6 +21,25 @@ switch($_POST['sex']) {
     }
 };
 
+switch($_POST['limbs']) {
+    case '1': {
+        $limbs='1';
+        break;
+    }
+    case '2':{
+        $limbs='2';
+        break;
+    }
+    case '3':{
+        $limbs='3';
+        break;
+    }
+    case '4':{
+        $limbs='4';
+        break;
+    }
+};
+
 $power1=in_array('bessm',$_POST['Superpowers']) ? '1' : '0';
 $power2=in_array('passing',$_POST['Superpowers']) ? '1' : '0';
 $power3=in_array('fly',$_POST['Superpowers']) ? '1' : '0';
