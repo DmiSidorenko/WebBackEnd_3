@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="StyleForForm.css">
+</head>
+
+<body>
+  <form method="POST" class="row mx-5 my-2 gy-1 popup-form">
+                    <div class="form_item form-group">
+                        <label for="formName" style="color: purple;">Имя:</label>
+                        <input type="text" class="form_input _req form-control w-75 shadow bg-white rounded" name = "FIO" id="formName" placeholder="Введите ФИО" required>
+                        <small class="form-text text-muted">Введите ваши ФИО</small>
+                        </div>
+
+                     <div class="form_item form-group">
+                         <label for="formEmail" style="color: purple;">E-mail:</label>
+                         <input type="email" class="form_input _req _email form-control w-75 shadow bg-white rounded" id="formEmail" name = "email" required placeholder="Введите E-mail:" >
+                         <small class="form-text text-muted">Введите один из следующих email: mail.ru, gmail.com, yandex.ru и т.п.</small>
+                         </div> 
+
+  		     <div class="form_item form-group">
+                          <label for="formDate" style="color: purple;">Дата рождения:</label>
+                          <input type="date" class="form_input _req form-control w-50 shadow bg-white rounded" name="date" value=""
+                             min="1900-01-01" max="2022-03-30" required>
+			  <small class="form-text text-muted"> Введите вашу дату рождения. </small>
+                          </div>
+
+		     <div class="form_item form-group">
+            		<label for="formSex" style="color: purple;">Пол:</label></br>
+            		<div class="form-check1 form-check-inline">
+                	<input class="form-check-input" type="radio" name="sex" id="SexOne" value="male" required>
+                	<label class="form-check-label" for="RadioOne">Мужской</label>
+           		 </div>
+            		<div class="form-check1 form-check-inline">
+              	        <input class="form-check-input" type="radio" name="sex" id="SexTwo" value="female">
+                	<label class="form-check-label" for="RadioTwo">Женский</label>
+            		</div>
+			<div><small class="form-text text-muted"> Укажите ваш пол. </small></div>
+       		      </div>
+
+		    <div class="form_item form-group">
+           	 	<label for="formLimbs" style="color: purple;">Количество конечностей:</label></br>
+            		<div class="form-check form-check-inline">
+                	<input class="form-check-input" type="radio" name="limbs" id="RadioKeyOne" value="1" required>
+                	<label class="form-check-label" for="RadioKeyOne">1</label>
+            	       </div>
+            		<div class="form-check form-check-inline">
+                	<input class="form-check-input" type="radio" name="limbs" id="RadioKeyTwo" value="2">
+                	<label class="form-check-label" for="RadioKeyTwo">2</label>
+            	       </div>
+            		<div class="form-check form-check-inline">
+                	<input class="form-check-input" type="radio" name="limbs" id="RadioKeyThree" value="3">
+                	<label class="form-check-label" for="RadioKeyThree">3</label>
+            	       </div>
+            		<div class="form-check form-check-inline">
+                	<input class="form-check-input" type="radio" name="limbs" id="RadioKeyFour" value="4">
+                	<label class="form-check-label" for="RadioKeyFour">4</label>
+            	       </div>
+			<div class="form-check form-check-inline">
+                	<input class="form-check-input" type="radio" name="limbs" id="RadioKeyFive" value="Больше">
+                	<label class="form-check-label" for="RadioKeyFive">Больше</label>
+            	       </div>
+			<div><small class="form-text text-muted"> Укажите количество конечностей (указывайте честно, не стесняйтесь &#128513) </small></div>
+        	    </div>
+
+		    <div class="form_item form-group">
+            		<label for="Superpower" style="color: purple;">Сверхспособности:</label>
+            		<select multiple class="form_input _req form-control w-50 shadow bg-white rounded" id="multipleSuper"
+                	name="Superpowers[]" required> 
+                	<option value="bessm">Бессмертие</option>
+                	<option value="passing">Прохожление сквозь стены</option>
+                	<option value="fly">Левитация</option>
+			<option value="invisible">Невидимость</option>
+			<option value="more">Другие</option>
+			<option value="nothing">Отсутствуют</option>
+            		</select>
+       		    </div>
+
+
+  			<div class="form_item form-group w-75">
+                         <label for="formBiography" style="color: purple;">Биография:</label>
+                         <textarea id="formBiography" id="formBiography" name="Biography" class="form_input _req form-control shadow bg-white rounded"  id="form">
+                         </textarea>
+                         <small class="form-text text-muted">Необязательное поле</small>
+                         </div>
+
+                                <div class="form-check">
+                                    <label id="accept " class="checkbox_label form-check-label">С контрактом ознакомлен(а)  </label>
+                                    <input for="accept" checked type="checkbox" name="accept" class="checkbox_input form-check-input" style="color: purple;" required>           
+                                    </div>
+
+                  <label class = "col-12"><input type = "submit" name = "submit" class = "submit"></label>
+                  </form>
+                  </div> 
+
+<div style="margin-left: 110px;">
+		<img src="1.png" class="img-responsive" style="width: 90%;">
+		<img src="2.png" class="img-responsive" style="width: 90%;"> 
+		<img src="3.png" class="img-responsive" style="width: 90%;">
+</div> 
+</body>
