@@ -51,7 +51,7 @@ $pass = '1452343';
 $db = new PDO('mysql:host=localhost;dbname=u47531', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 
 try {
-    $stmt = $db->prepare("INSERT INTO application SET FIO = ?, email = ?, birth_date = ? ,gender = ?, limb = ?,ability =?, bio = ?);
+    $stmt = $db->prepare("INSERT INTO application SET fio = ?, email = ?, birth_date = ? ,gender = ?, limb = ?,ability =?, bio = ?);
     $stmt -> execute(array($_POST['FIO'],$_POST['email'],$_POST['date'],$sex,$limbs,$power,$_POST['Biography']));
 }
 catch(PDOException $e){
